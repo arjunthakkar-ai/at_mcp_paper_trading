@@ -41,7 +41,9 @@ from alpaca.data.timeframe import TimeFrame
 # 1. LOAD CONFIG
 # ──────────────────────────────────────────────
 # load_dotenv() reads your .env file so we don't hardcode secrets.
-load_dotenv()
+# Using an absolute path anchored to this file's location ensures the .env
+# is found regardless of which directory the MCP client launches the server from.
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 ALPACA_API_KEY = os.getenv("ALPACA_API_KEY", "")
 ALPACA_SECRET_KEY = os.getenv("ALPACA_SECRET_KEY", "")
