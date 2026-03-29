@@ -8,6 +8,7 @@ pyvenv.cfg
 venv/
 .venv/
 env/
+.env
 .env/
 
 # Python
