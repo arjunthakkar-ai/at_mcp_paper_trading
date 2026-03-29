@@ -1,1 +1,16 @@
-.env
+# Virtual environment
+bin/
+include/
+lib/
+pyvenv.cfg
+
+# Common venv directory names
+venv/
+.venv/
+env/
+.env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
